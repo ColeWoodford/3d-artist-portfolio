@@ -1,22 +1,30 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Redirect } from "react-router-dom";
+import { CardConfig } from "types/cardTypes";
 
 interface Props {
-  detailId: number;
+  config: CardConfig;
 }
 
 function ArtCard(props: Props) {
-  const { detailId } = props;
-  const [selectedDetail, setSelectedDetail] = useState<number | null>(null);
+  const { config } = props;
+  const [selectedDetail, setSelectedDetail] = useState<string | null>(null);
 
   const handleClick = () => {
-    setSelectedDetail(detailId);
+    setSelectedDetail(config.route);
   };
 
-  if (selectedDetail) return <Redirect to={`/details/${selectedDetail}`} />;
+  if (selectedDetail) return <Redirect to={`/details${selectedDetail}`} />;
 
-  return <Glass onClick={handleClick}>Card</Glass>;
+  return (
+    <Glass onClick={handleClick}>
+      <ImageContainer>
+        <img src={config.image} alt="card thumbnail" />
+      </ImageContainer>
+      {config.title}
+    </Glass>
+  );
 }
 
 const Glass = styled.div`
@@ -28,6 +36,32 @@ const Glass = styled.div`
   border-radius: 10px;
 
   cursor: pointer;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:
+    15rem minmax(28px, 1.5rem) minmax(28px, 1rem) minmax(28px, 1.5rem)
+    minmax(3rem, 1fr);
+  grid-template-areas:
+    "image"
+    "icons"
+    "title"
+    "type"
+    "description";
+
+  overflow: hidden;
+`;
+
+export const ImageContainer = styled.div`
+  grid-area: image;
+  border-bottom: 1px solid #aaa;
+
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+  }
 `;
 
 export default ArtCard;

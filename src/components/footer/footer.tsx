@@ -9,9 +9,12 @@ const FooterContainer = styled.footer`
   display: grid;
   align-items: center;
   justify-items: center;
+  align-self: end;
 
   background: #ffffff;
   color: #000;
+
+  height: 5rem;
 `;
 
 export default Footer;

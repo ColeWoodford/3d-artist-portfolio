@@ -30,7 +30,7 @@ const NavBar = styled.nav`
 `;
 
 const HeaderContainer = styled.header`
-  content-area: header;
+  grid-area: header;
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 1fr;
@@ -38,6 +38,8 @@ const HeaderContainer = styled.header`
 
   background: #ffffff;
   color: #000;
+
+  height: 5rem;
 `;
 
 export default Header;
