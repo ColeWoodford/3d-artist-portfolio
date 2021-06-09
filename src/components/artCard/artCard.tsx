@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
-import { Redirect } from "react-router-dom";
 import { CardConfig } from "types/cardTypes";
 
 interface Props {
@@ -11,11 +10,16 @@ function ArtCard(props: Props) {
   const { config } = props;
   const [selectedDetail, setSelectedDetail] = useState<string | null>(null);
 
+  useEffect(() => {
+    if (!selectedDetail) return;
+    let newWindow = window.open(`${selectedDetail}`, "_self");
+    newWindow?.focus();
+    setSelectedDetail(null);
+  }, [selectedDetail]);
+
   const handleClick = () => {
     setSelectedDetail(config.route);
   };
-
-  if (selectedDetail) return <Redirect to={`/details${selectedDetail}`} />;
 
   return (
     <Glass onClick={handleClick}>
