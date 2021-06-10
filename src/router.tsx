@@ -4,6 +4,7 @@ import Footer from "components/footer/footer";
 import Landing from "pages/landing/landing";
 import Details from "pages/details/details";
 import ThreeCompass from "pages/threeCompass/threeCompass";
+import ThreeTanks from "pages/threeTanks/threeTanks";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function Routes() {
@@ -20,6 +21,7 @@ function Routes() {
               path={"/details/threeCompass"}
               component={ThreeCompass}
             />
+            <Route exact path={"/details/threeTanks"} component={ThreeTanks} />
             <Route exact path={"/details/:detailId"} component={Details} />
           </Switch>
         </ContentContainer>
