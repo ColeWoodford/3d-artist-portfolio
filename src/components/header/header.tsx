@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { GithubOutlined, HomeOutlined } from "@ant-design/icons";
 
 function Header() {
   return (
     <HeaderContainer>
-      <Link to={"/home"}>
+      <HomeLink to={"/home"}>
+        <HomeOutlined />
         <h2>Cole Woodford's Portfolio</h2>
-      </Link>
+      </HomeLink>
+      <div style={{ flex: 1 }} />
       <NavBar>
-        <div>nav1</div>
-        <div>nav2</div>
-        <div>nav3</div>
-        <div>nav4</div>
-        <div>nav5</div>
+        <IconContainer href="https://github.com/ColeWoodford">
+          GitHub <GitHubLink />
+        </IconContainer>
       </NavBar>
     </HeaderContainer>
   );
@@ -29,14 +30,40 @@ const NavBar = styled.nav`
   }
 `;
 
+const HomeLink = styled(Link)`
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  & span {
+    font-size: 1.5rem;
+  }
+  & h2 {
+    margin-left: 0.5rem;
+  }
+`;
+
+const IconContainer = styled.a`
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`;
+
+const GitHubLink = styled(GithubOutlined)`
+  margin-left: 0.5rem;
+  font-size: 2rem;
+`;
+
 const HeaderContainer = styled.header`
   grid-area: header;
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 1fr;
+  display: flex;
   align-items: center;
 
-  background: #ffffff;
+  padding: 0 6rem;
+
+  background: #646464;
+  border-bottom: 2px solid #ffffff;
   color: #000;
 
   height: 5rem;

@@ -7,7 +7,7 @@ function Landing() {
     const cardArray: any = [];
 
     CARD_CONFIGS.forEach((config, index) => {
-      cardArray.push(<ArtCard config={config} />);
+      cardArray.push(<ArtCard config={config} key={index} />);
     });
     return cardArray;
   };
@@ -16,6 +16,9 @@ function Landing() {
 }
 
 const LandingContainer = styled.div`
+  width: 100%;
+  height: 100%;
+
   padding: 1rem 5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
@@ -26,6 +29,23 @@ const LandingContainer = styled.div`
   }
   @media (max-width: 700px) {
     grid-template-columns: 1fr;
+  }
+
+  background: linear-gradient(-45deg,#1f1f1f, #c9c8c8);
+  /* background: linear-gradient(-45deg,#1f1f1f, #c9c8c8, #6394ff, #103ffa); */
+  /* background-size: 400% 400%; */
+  /* animation: gradient 15s ease infinite; */
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 `;
 

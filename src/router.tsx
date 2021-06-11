@@ -36,7 +36,7 @@ const PageLayoutContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
-  grid-gap: 20px;
+  /* grid-gap: 20px; */
   grid-template-areas:
     "header"
     "content"
@@ -45,7 +45,7 @@ const PageLayoutContainer = styled.div`
 
 const ContentContainer = styled.div`
   grid-area: content;
-  padding: 10px;
+  /* padding: 10px; */
 `;
 
 export default Routes;

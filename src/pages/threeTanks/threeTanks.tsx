@@ -172,6 +172,8 @@ const PageContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin-bottom: 5rem;
 `;
 
 const StepContainer = styled.div`

@@ -23,10 +23,15 @@ function ArtCard(props: Props) {
 
   return (
     <Glass onClick={handleClick}>
-      <ImageContainer>
+      <ImageContainer style={{ height: "15rem" }}>
         <img src={config.image} alt="card thumbnail" />
       </ImageContainer>
-      {config.title}
+      <TitleContainer>{config.title}</TitleContainer>
+
+      <DescriptionContainer>
+        {config.strong && <StrongContainer>{config.strong}</StrongContainer>}
+        {config.description}
+      </DescriptionContainer>
     </Glass>
   );
 }
@@ -43,9 +48,6 @@ const Glass = styled.div`
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows:
-    15rem minmax(28px, 1.5rem) minmax(28px, 1rem) minmax(28px, 1.5rem)
-    minmax(3rem, 1fr);
   grid-template-areas:
     "image"
     "icons"
@@ -66,6 +68,20 @@ export const ImageContainer = styled.div`
     object-fit: cover;
     border-radius: 4px 4px 0 0;
   }
+`;
+
+const TitleContainer = styled.h2`
+  margin: 0;
+  padding: 0 1rem;
+`;
+
+const DescriptionContainer = styled.div`
+  padding: 0 1rem;
+`;
+
+const StrongContainer = styled.span`
+  color: #506aff;
+  font-weight: 700;
 `;
 
 export default ArtCard;
