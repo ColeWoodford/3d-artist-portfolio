@@ -13,6 +13,8 @@ export const CARD_CONFIGS: CardConfig[] = [
     route: "/details/threeCompass",
     description:
       "Compass widget built with Three.js using targetted material indexes on separate faces. An orthographic camera follows the users control actions for movement. The renderer is split to show two scenes at once.",
+    codeLink:
+      "https://github.com/ColeWoodford/3d-artist-portfolio/blob/main/src/three/HUDOrthoScene.js",
   },
   {
     title: "Multiplayer Block Jump",
@@ -22,6 +24,7 @@ export const CARD_CONFIGS: CardConfig[] = [
       "Using Three.js and Socket.io, this multiplayer game tracks users logged in and how high they can jump up the blocks. A leaderboard displays the highscores.",
     strong:
       "Because this is hosted on heroku, please allow time for the app to spin up once clicked. ",
+    codeLink: "https://github.com/ColeWoodford/block-jump",
   },
   {
     title: "Blender Hanford Tank",

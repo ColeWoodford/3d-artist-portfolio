@@ -62,7 +62,7 @@ const HeaderContainer = styled.header`
 
   padding: 0 6rem;
 
-  background: #646464;
+  background: #414141;
   border-bottom: 2px solid #ffffff;
   color: #000;
 

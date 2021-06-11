@@ -11,7 +11,7 @@ const FooterContainer = styled.footer`
   justify-items: center;
   align-self: end;
 
-  background: #646464;
+  background: #414141;
   border-top: 2px solid #ffffff;
   color: #000;
 

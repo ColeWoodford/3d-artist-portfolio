@@ -31,6 +31,13 @@ function ArtCard(props: Props) {
       <DescriptionContainer>
         {config.strong && <StrongContainer>{config.strong}</StrongContainer>}
         {config.description}
+        {config.codeLink && (
+          <div>
+            <a href={config.codeLink} onClick={(e) => e.stopPropagation()}>
+              See Code Here
+            </a>
+          </div>
+        )}
       </DescriptionContainer>
     </Glass>
   );
@@ -56,6 +63,10 @@ const Glass = styled.div`
     "description";
 
   overflow: hidden;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.45);
+  }
 `;
 
 export const ImageContainer = styled.div`
