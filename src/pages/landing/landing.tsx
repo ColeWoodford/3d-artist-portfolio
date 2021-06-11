@@ -32,9 +32,6 @@ const LandingContainer = styled.div`
   }
 
   background: linear-gradient(-45deg,#1f1f1f, #c9c8c8);
-  /* background: linear-gradient(-45deg,#1f1f1f, #c9c8c8, #6394ff, #103ffa); */
-  /* background-size: 400% 400%; */
-  /* animation: gradient 15s ease infinite; */
 }
 
 @keyframes gradient {

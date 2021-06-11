@@ -4,4 +4,5 @@ export interface CardConfig {
   route: string;
   description: string;
   strong?: string;
+  codeLink?: string;
 }
