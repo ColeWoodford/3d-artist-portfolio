@@ -5,11 +5,16 @@ import hanford_tank from "./imgs/hanford_tank.png";
 import unity from "./imgs/unity.png";
 // import code from "./imgs/code.png";
 import shmups from "./imgs/shmups.png";
+import space from "./imgs/space.png";
+import balloon from "./imgs/balloon.png";
+import crates from "./imgs/crates.png";
+import runner from "./imgs/runner.png";
+import soccer from "./imgs/soccer.png";
 
 export const CARD_CONFIGS: CardConfig[] = [
   {
     title: "PLAY: Space Trader UI",
-    image: unity,
+    image: space,
     route: "https://tubular-naiad-609993.netlify.app/",
     description:
       "A web-based mmo game using a 3rd party API. This is a work in progress, but I am building a game that interacts with the Space Trader MMO API. Currently the user can manage their character and start the game. They can see the starting zone and move around the planets.",
@@ -18,7 +23,7 @@ export const CARD_CONFIGS: CardConfig[] = [
   },
   {
     title: "PLAY: Clicky Crates",
-    image: unity,
+    image: crates,
     route: "https://chic-taiyaki-e46dd6.netlify.app/",
     description:
       "A clicking game with a UI. Select what difficulty you want to play, then click the crates for points but avoid the skulls!",
@@ -27,7 +32,7 @@ export const CARD_CONFIGS: CardConfig[] = [
   },
   {
     title: "PLAY: Soccer Game",
-    image: unity,
+    image: soccer,
     route: "https://fluffy-daifuku-7caa16.netlify.app/",
     description:
       "Play a game of soccer against waves of enemies. At the end of each round the number of opponents increases by 1. Use the yellow powerup to send them flying!",
@@ -36,7 +41,7 @@ export const CARD_CONFIGS: CardConfig[] = [
   },
   {
     title: "PLAY: Endless Runner",
-    image: unity,
+    image: runner,
     route: "https://eloquent-pastelito-1806bc.netlify.app/",
     description:
       "Endless runner made with Unity. Press the spacebar to jump and double jump. Avoid obstacles while your character runs endlessly.",
@@ -45,7 +50,7 @@ export const CARD_CONFIGS: CardConfig[] = [
   },
   {
     title: "PLAY: Balloon Sidescroller",
-    image: unity,
+    image: balloon,
     route: "https://beautiful-cascaron-ddd262.netlify.app/",
     description:
       "Sidescroller game where the user controls a balloon. Press the space bar to bounce through the air. Collect money and avoid bombs or its game over!",
